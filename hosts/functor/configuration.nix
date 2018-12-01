@@ -1,7 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { pkgs, ... }:
 
 {
@@ -23,8 +19,6 @@
   hardware.pulseaudio.support32Bit = true;
   services.xserver.xrandrHeads = [ "DP-4" "DP-2" ];
 
-
-  # Steam
   users.users.derrick.packages = [
     pkgs.steam
   ];

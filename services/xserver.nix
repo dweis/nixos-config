@@ -11,16 +11,17 @@
     compton
     feh
     glxinfo
+    hicolor-icon-theme
     hyper
     networkmanagerapplet
     rofi
     scrot
     stack
     termite
+    vscode
     xbindkeys
     xorg.xmodmap
     xscreensaver
-    hicolor-icon-theme
   ];
 
   # Enable the X11 windowing system.
@@ -34,8 +35,8 @@
     };
     displayManager = {
       slim = {
-	enable = true;
-	defaultUser = "derrick";
+        enable = true;
+        defaultUser = "derrick";
       };
       sessionCommands = with pkgs; lib.mkAfter
         ''
@@ -50,7 +51,7 @@
           haskellPackages.xmonad-contrib
           haskellPackages.xmonad-extras
           haskellPackages.xmonad
-	  haskellPackages.taffybar
+    haskellPackages.taffybar
         ];
       };
       default = "xmonad";

@@ -11,7 +11,7 @@
 
     firefox = {
       enableGoogleTalkPlugin = true;
-      # enableAdobeFlash = true;
+      #enableAdobeFlash = true;
     };
   };
 
@@ -82,21 +82,12 @@
   };
 
   # List services that you want to enable:
-  
+
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  #networking.firewall.enable = false;
-  
   # Allow 8612 for Sane to detect scanner
   networking.firewall.allowedUDPPorts  = [ 8612 ];
-  
-  # Only allow new users to be created via this file
-  #users.mutableUsers = false;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -109,12 +100,13 @@
   services.avahi.enable = true;
   services.avahi.nssmdns = true;
 
+  # Enable scanning.
   hardware.sane.enable = true;
 
-  # Enable virtualbox
+  # Enable virtualbox.
   virtualisation.virtualbox.host.enable = true;
 
-  # Enable docker
+  # Enable docker.
   virtualisation.docker.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.

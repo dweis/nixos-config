@@ -1,15 +1,20 @@
+# Depends on nixos hardware channel:
+# $ sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
+# $ sudo nix-channel --update nixos-hardware
+
 { pkgs, ... }:
 
 {
-  networking.hostName = "lambda";
+  networking.hostName = "monoid";
 
   # Network Manager.
   networking.networkmanager.enable = true;
 
   imports =
     [ 
-      ./common.nix
+      <lenovo/thinkpad/x1/6th-gen/QHD>
       ./hardware-configuration.nix
+      ./common.nix
       ./services/xserver.nix
     ];
 
@@ -22,20 +27,12 @@
   # Enable touchpad support.
   services.xserver.libinput.enable = true;
 
-  # Enable Bumblebee.
-  hardware.bumblebee.enable = true;
-  hardware.bumblebee.connectDisplay = true;
-
   users.users.derrick.packages = [
     pkgs.steam
   ];
 
-  services.xserver.videoDrivers = ["nvidia-beta" "intel"];
   hardware.opengl.driSupport32Bit = true;
   hardware.pulseaudio.support32Bit = true;
-
-  # Install nvidia drivers in addition to intel one.
-  hardware.opengl.extraPackages = [ pkgs.linuxPackages.nvidia_x11.out ];
 
   # Support backlight buttons.
   services.actkbd = {
