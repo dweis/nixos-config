@@ -34,6 +34,7 @@
   environment.systemPackages = with pkgs; [
     # ---- General
     imagemagick7
+    stow # dotfile management
     tmux
     # ---- Editors
     vim
