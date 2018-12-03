@@ -11,13 +11,15 @@
     compton
     feh
     glxinfo
-    hicolor-icon-theme
+    hicolor-icon-theme # for taffybar battery icon
+    gnome3.adwaita-icon-theme # for taffybar battery icon
     hyper
     networkmanagerapplet
     rofi
     scrot
     stack
     termite
+    volumeicon
     vscode
     xbindkeys
     xorg.xmodmap
@@ -54,6 +56,8 @@
     haskellPackages.taffybar
         ];
       };
+      i3.package = pkgs.i3-gaps;
+      i3.enable = true;
       default = "xmonad";
     };
   };
