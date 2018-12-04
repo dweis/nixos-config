@@ -8,6 +8,7 @@
 
   environment.systemPackages = with pkgs; [
     # ---- X
+    alacritty
     compton
     feh
     glxinfo
