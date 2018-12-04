@@ -14,8 +14,10 @@
     [ 
       <lenovo/thinkpad/x1/6th-gen/QHD>
       ./hardware-configuration.nix
-      ./common.nix
-      ./services/xserver.nix
+      ./modules/base.nix
+      ./modules/desktop.nix
+      ./modules/kubernetes.nix
+      ./modules/steam.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -26,10 +28,6 @@
 
   # Enable touchpad support.
   services.xserver.libinput.enable = true;
-
-  users.users.derrick.packages = [
-    pkgs.steam
-  ];
 
   hardware.opengl.driSupport32Bit = true;
   hardware.pulseaudio.support32Bit = true;

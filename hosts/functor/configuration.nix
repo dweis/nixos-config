@@ -5,9 +5,11 @@
 
   imports =
     [
-      ./common.nix
       ./hardware-configuration.nix
-      ./services/xserver.nix
+      ./modules/base.nix
+      ./modules/desktop.nix
+      ./modules/kubernetes.nix
+      ./modules/steam.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -21,10 +23,6 @@
   hardware.opengl.driSupport32Bit = true;
   hardware.pulseaudio.support32Bit = true;
   services.xserver.xrandrHeads = [ "DP-4" "DP-2" ];
-
-  users.users.derrick.packages = [
-    pkgs.steam
-  ];
 
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database
