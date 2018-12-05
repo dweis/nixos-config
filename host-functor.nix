@@ -6,10 +6,10 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./modules/base.nix
-      ./modules/desktop.nix
-      ./modules/kubernetes.nix
-      ./modules/steam.nix
+      ./base.nix
+      ./desktop.nix
+      ./kubernetes.nix
+      ./steam.nix
     ];
 
   # Use the systemd-boot EFI boot loader.

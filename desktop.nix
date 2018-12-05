@@ -1,5 +1,8 @@
 { pkgs, ... }:
 
+let 
+  wallpaper = pkgs.copyPathToStore ./wallpaper.jpg;
+in
 {
   sound.enable = true;
   sound.mediaKeys.enable = true;
@@ -21,14 +24,17 @@
     alacritty
     chromium
     compton
-    glib # for mate (gsettings)
     feh
     firefoxWrapper
     glxinfo
-    hicolor-icon-theme # for taffybar battery icon
-    gnome3.adwaita-icon-theme # for taffybar battery icon
+    gnome3.dconf
+    gnome3.dconf-editor
     hyper
+    i3blocks-gaps
+    lightlocker
     networkmanagerapplet
+    numix-icon-theme
+    adapta-gtk-theme
     rofi
     scrot
     spotify
@@ -53,6 +59,7 @@
     displayManager = {
       lightdm = {
         enable = true;
+        background = wallpaper;
       };
       sessionCommands = with pkgs; lib.mkAfter
         ''
@@ -60,16 +67,6 @@
         '';
     };
     windowManager = {
-      xmonad = {
-        enable = true;
-        enableContribAndExtras = true;
-        extraPackages = haskellPackages: [
-          haskellPackages.xmonad-contrib
-          haskellPackages.xmonad-extras
-          haskellPackages.xmonad
-          haskellPackages.taffybar
-        ];
-      };
       i3.package = pkgs.i3-gaps;
       i3.enable = true;
       default = "i3";
@@ -110,5 +107,27 @@
       source-serif-pro
       emojione
     ];
+  };
+
+  environment.extraInit = ''
+      # GTK3 theme
+      export GTK_THEME="Adapta-Nokto-Eta"
+    '';
+
+  environment.etc."xdg/gtk-3.0/settings.ini" = {
+      text = ''
+        [Settings]
+        gtk-icon-theme-name=Numix
+        gtk-theme-name=Adapta-Nokto-Eta
+        gtk-application-prefer-dark-theme = true
+      '';
+      mode = "444";
+    };
+
+    environment.etc."gtk-2.0/gtkrc" = {
+      text = ''
+        gtk-icon-theme-name=Numix
+      '';
+      mode = "444";
   };
 }

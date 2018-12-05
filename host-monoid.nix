@@ -1,18 +1,23 @@
-{ lib, pkgs, ... }:
+# Depends on nixos hardware channel:
+# $ sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
+# $ sudo nix-channel --update nixos-hardware
+
+{ pkgs, ... }:
 
 {
-  networking.hostName = "lambda";
+  networking.hostName = "monoid";
 
   # Network Manager.
   networking.networkmanager.enable = true;
 
   imports =
     [ 
+      <lenovo/thinkpad/x1/6th-gen/QHD>
       ./hardware-configuration.nix
-      ./modules/base.nix
-      ./modules/desktop.nix
-      ./modules/kubernetes.nix
-      ./modules/steam.nix
+      ./base.nix
+      ./desktop.nix
+      ./kubernetes.nix
+      ./steam.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -24,16 +29,8 @@
   # Enable touchpad support.
   services.xserver.libinput.enable = true;
 
-  # Enable Bumblebee.
-  hardware.bumblebee.enable = true;
-  hardware.bumblebee.connectDisplay = true;
-
-  services.xserver.videoDrivers = ["nvidia-beta" "intel"];
   hardware.opengl.driSupport32Bit = true;
   hardware.pulseaudio.support32Bit = true;
-
-  # Install nvidia drivers in addition to intel one.
-  hardware.opengl.extraPackages = [ pkgs.linuxPackages.nvidia_x11.out ];
 
   # Support backlight buttons.
   services.actkbd = {
@@ -42,14 +39,6 @@
       { keys = [ 224 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/light -U 10"; }
       { keys = [ 225 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/light -A 10"; }
     ];
-  };
-
-  services.xserver.dpi = 144;
-  fonts.fontconfig.dpi = 144;
-
-  environment.variables = {
-    GDK_SCALE = lib.mkDefault "1.5";
-    GDK_DPI_SCALE = lib.mkDefault "0.75";
   };
 
   # This value determines the NixOS release with which your system is to be
