@@ -21,6 +21,7 @@
     alacritty
     chromium
     compton
+    glib # for mate (gsettings)
     feh
     firefoxWrapper
     glxinfo
@@ -30,6 +31,7 @@
     networkmanagerapplet
     rofi
     scrot
+    spotify
     stack
     termite
     volumeicon
@@ -44,13 +46,13 @@
     layout = "us";
     xkbOptions = "caps:super";
     desktopManager = {
-      default = "none";
+      default = "mate";
       xterm.enable = false;
+      mate.enable = true;
     };
     displayManager = {
-      slim = {
+      lightdm = {
         enable = true;
-        defaultUser = "derrick";
       };
       sessionCommands = with pkgs; lib.mkAfter
         ''
@@ -106,6 +108,7 @@
       source-code-pro
       source-sans-pro
       source-serif-pro
+      emojione
     ];
   };
 }
