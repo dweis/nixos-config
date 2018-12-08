@@ -50,5 +50,7 @@
 
   services.openssh.enable = true;
   
+  hardware.ledger-nano-s.enable = true;
+
   system.autoUpgrade.enable = true;
 }

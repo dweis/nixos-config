@@ -6,6 +6,7 @@
   imports =
     [
       ./hardware-configuration.nix
+      ./ledger-nano-s.nix
       ./base.nix
       ./desktop.nix
       ./kubernetes.nix
