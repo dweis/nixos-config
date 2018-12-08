@@ -4,6 +4,7 @@
   imports =
     [
       ./develop.nix
+      ./ledger-nano-s.nix
       ./users.nix
       ./printscan.nix
     ];
@@ -30,6 +31,8 @@
     stow # dotfile management
     vim
     emacs
+    file
+    killall
     nodePackages.tern        # spacemacs/js
     nodePackages.js-beautify # spacemacs/js
     nodePackages.eslint      # spacemacs/js
@@ -40,6 +43,8 @@
     git
     pciutils
     tmux
+    unzip
+    zip
   ];
 
   programs = {

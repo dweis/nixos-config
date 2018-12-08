@@ -12,7 +12,8 @@
 
   imports =
     [ 
-      <lenovo/thinkpad/x1/6th-gen/QHD>
+#      <lenovo/thinkpad/x1/6th-gen/QHD>
+      <lenovo/thinkpad/x1/6th-gen>
       ./hardware-configuration.nix
       ./base.nix
       ./desktop.nix

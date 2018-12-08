@@ -39,7 +39,6 @@ in
     scrot
     spotify
     stack
-    termite
     volumeicon
     vscode
     xbindkeys
