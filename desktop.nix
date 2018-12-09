@@ -24,7 +24,6 @@ in
     alacritty
     chromium
     compton
-    feh
     firefoxWrapper
     glxinfo
     gnome3.dconf
@@ -34,7 +33,9 @@ in
     lightlocker
     networkmanagerapplet
     numix-icon-theme
-    adapta-gtk-theme
+    numix-icon-theme-square
+    numix-cursor-theme
+    numix-gtk-theme
     rofi
     scrot
     spotify
@@ -110,22 +111,22 @@ in
 
   environment.extraInit = ''
       # GTK3 theme
-      export GTK_THEME="Adapta-Nokto-Eta"
+      export GTK_THEME="Numix"
     '';
 
   environment.etc."xdg/gtk-3.0/settings.ini" = {
       text = ''
         [Settings]
         gtk-icon-theme-name=Numix
-        gtk-theme-name=Adapta-Nokto-Eta
-        gtk-application-prefer-dark-theme = true
+        gtk-theme-name=Numix Square
+        gtk-application-prefer-dark-theme = false
       '';
       mode = "444";
     };
 
     environment.etc."gtk-2.0/gtkrc" = {
       text = ''
-        gtk-icon-theme-name=Numix
+        gtk-icon-theme-name=Numix Square
       '';
       mode = "444";
   };
