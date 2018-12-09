@@ -12,7 +12,6 @@
 
   imports =
     [ 
-#      <lenovo/thinkpad/x1/6th-gen/QHD>
       <lenovo/thinkpad/x1/6th-gen>
       ./hardware-configuration.nix
       ./base.nix
@@ -33,13 +32,8 @@
   hardware.opengl.driSupport32Bit = true;
   hardware.pulseaudio.support32Bit = true;
 
-  # Support backlight buttons.
-  services.actkbd = {
-    enable = true;
-    bindings = [
-      { keys = [ 224 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/light -U 10"; }
-      { keys = [ 225 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/light -A 10"; }
-    ];
+  programs = {
+    light.enable = true; # Needed for the /run/wrappers/bin/light SUID wrapper.
   };
 
   # This value determines the NixOS release with which your system is to be

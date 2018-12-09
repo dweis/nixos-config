@@ -50,7 +50,6 @@
   programs = {
     zsh.enable = true;
     ssh.startAgent = true;
-    light.enable = true; # Needed for the /run/wrappers/bin/light SUID wrapper.
   };
 
   services.openssh.enable = true;
