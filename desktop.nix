@@ -117,8 +117,8 @@ in
   environment.etc."xdg/gtk-3.0/settings.ini" = {
       text = ''
         [Settings]
-        gtk-icon-theme-name=Numix
-        gtk-theme-name=Numix Square
+        gtk-icon-theme-name=Numix Square
+        gtk-theme-name=Numix
         gtk-application-prefer-dark-theme = false
       '';
       mode = "444";
