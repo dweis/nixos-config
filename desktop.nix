@@ -22,6 +22,7 @@ in
 
   environment.systemPackages = with pkgs; [
     alacritty
+    calibre
     chromium
     compton
     firefoxWrapper
