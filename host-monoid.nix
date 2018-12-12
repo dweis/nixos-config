@@ -17,6 +17,7 @@
       ./base.nix
       ./desktop.nix
       ./kubernetes.nix
+      ./yubikey.nix
       #./steam.nix
     ];
 

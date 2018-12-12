@@ -44,6 +44,7 @@
     pciutils
     tmux
     unzip
+    usbutils
     zip
   ];
 

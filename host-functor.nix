@@ -10,6 +10,7 @@
       ./desktop.nix
       ./kubernetes.nix
       ./steam.nix
+      ./yubikey.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
