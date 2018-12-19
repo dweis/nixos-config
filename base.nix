@@ -7,6 +7,7 @@
       ./ledger-nano-s.nix
       ./users.nix
       ./printscan.nix
+      ./firewall.nix
     ];
 
   nixpkgs.config = {

@@ -1,8 +1,9 @@
 { pkgs, ... }:
 
 {
-  # Allow 8612 for Sane to detect scanner
-  networking.firewall.allowedUDPPorts  = [ 8612 ];
+  networking.firewall.allowedUDPPorts = [
+    8612 # Allow 8612 for Sane to detect scanner
+  ];
 
   # Enable CUPS to print documents.
   services.printing.enable = true;

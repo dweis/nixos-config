@@ -11,6 +11,7 @@
       ./kubernetes.nix
       ./steam.nix
       ./yubikey.nix
+      ./minecraft.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
