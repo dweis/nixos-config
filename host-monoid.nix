@@ -41,6 +41,7 @@
   #services.colord.enable = true;
   environment.systemPackages = with pkgs; [
     argyllcms
+    blueman
   ];
 
   # Enable touchpad support.
@@ -48,6 +49,7 @@
 
   hardware.opengl.driSupport32Bit = true;
   hardware.pulseaudio.support32Bit = true;
+  hardware.bluetooth.enable = true;
 
   # TODO
   # dispwin -d 1 ./B140QAN02_0.icm

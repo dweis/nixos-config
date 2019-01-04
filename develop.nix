@@ -3,7 +3,6 @@
 {
   environment.systemPackages = with pkgs; [
     awscli
-    aws-sam-cli
     elixir
     erlang
     nodejs-8_x

@@ -20,6 +20,7 @@ in
     calibre
     google-chrome
     compton
+    deadbeef
     firefoxWrapper
     glxinfo
     gnome3.dconf
@@ -36,6 +37,7 @@ in
     scrot
     spotify
     stack
+    vlc
     volumeicon
     vscode
     xbindkeys
