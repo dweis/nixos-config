@@ -33,6 +33,8 @@ in
     numix-icon-theme-square
     numix-cursor-theme
     numix-gtk-theme
+    paprefs
+    pavucontrol
     rofi
     scrot
     spotify
