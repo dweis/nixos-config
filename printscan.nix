@@ -10,7 +10,7 @@
   services.printing.browsedConf = ''
     CreateIPPPrinterQueues No
   '';
-  services.printing.drivers = [ pkgs.canon-cups-ufr2 pkgs.cups-filters ]; # pkgs.gutenprintBin pkgs.canon-cups-ufr2 ];
+  services.printing.drivers = [ pkgs.canon-cups-ufr2 pkgs.cups-filters ]; 
 
   # Enable AVAHI for printer discovery.
   services.avahi.enable = true;
