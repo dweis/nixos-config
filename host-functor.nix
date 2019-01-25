@@ -23,8 +23,23 @@
 
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.opengl.driSupport32Bit = true;
-  hardware.pulseaudio.support32Bit = true;
   services.xserver.xrandrHeads = [ "DP-4" "DP-2" ];
+
+  hardware.pulseaudio = {
+    enable = true;
+    extraModules = [ pkgs.pulseaudio-modules-bt ];
+    support32Bit = true;
+
+    daemon.config = {
+      flat-volumes = "no";
+      default-sample-format = "s24le";
+      default-sample-rate = "192000";
+      resample-method = "speex-float-10";
+      avoid-resampling = "true";
+    };
+
+    package = pkgs.pulseaudioFull;
+  };
 
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database

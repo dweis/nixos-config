@@ -55,8 +55,12 @@
   };
 
   services.openssh.enable = true;
-  
+
   hardware.ledger-nano-s.enable = true;
 
   system.autoUpgrade.enable = true;
+
+  nix.gc.automatic = true;
+  nix.gc.dates = "weekly";
+  nix.gc.options = "--delete-older-than 30d";
 }
