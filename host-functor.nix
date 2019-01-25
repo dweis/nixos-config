@@ -7,6 +7,7 @@
     [
       ./hardware-configuration.nix
       ./base.nix
+      ./audio.nix
       ./desktop.nix
       ./kubernetes.nix
       ./steam.nix

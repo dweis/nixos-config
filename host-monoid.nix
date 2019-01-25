@@ -15,10 +15,11 @@
       <nixos-hardware/lenovo/thinkpad/x1/6th-gen>
       ./hardware-configuration.nix
       ./base.nix
+      ./audio.nix
       ./desktop.nix
       ./kubernetes.nix
       ./yubikey.nix
-      #./steam.nix
+      ./steam.nix
     ];
 
   # Fix font sizes in X
@@ -48,7 +49,6 @@
   services.xserver.libinput.enable = true;
 
   hardware.opengl.driSupport32Bit = true;
-  hardware.pulseaudio.support32Bit = true;
   hardware.bluetooth.enable = true;
 
   # TODO
