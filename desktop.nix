@@ -57,9 +57,12 @@ in
       mate.enable = true;
     };
     displayManager = {
-      lightdm = {
+      #lightdm = {
+      #  enable = true;
+      #  background = wallpaper;
+      #};
+      gdm = {
         enable = true;
-        background = wallpaper;
       };
       sessionCommands = with pkgs; lib.mkAfter
         ''

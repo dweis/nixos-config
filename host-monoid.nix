@@ -19,7 +19,7 @@
       ./desktop.nix
       ./kubernetes.nix
       ./yubikey.nix
-      ./steam.nix
+      #./steam.nix
     ];
 
   # Fix font sizes in X
@@ -50,6 +50,9 @@
 
   hardware.opengl.driSupport32Bit = true;
   hardware.bluetooth.enable = true;
+
+  services.xserver.displayManager.gdm.wayland = true;
+  programs.sway.enable = true;
 
   # TODO
   # dispwin -d 1 ./B140QAN02_0.icm
