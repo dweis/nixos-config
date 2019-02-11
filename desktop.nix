@@ -64,10 +64,6 @@ in
       gdm = {
         enable = true;
       };
-      sessionCommands = with pkgs; lib.mkAfter
-        ''
-        xmodmap /path/to/.Xmodmap
-        '';
     };
     windowManager = {
       i3.package = pkgs.i3-gaps;
