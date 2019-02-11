@@ -26,21 +26,8 @@
   hardware.opengl.driSupport32Bit = true;
   services.xserver.xrandrHeads = [ "DP-4" "DP-2" ];
 
-  hardware.pulseaudio = {
-    enable = true;
-    extraModules = [ pkgs.pulseaudio-modules-bt ];
-    support32Bit = true;
-
-    daemon.config = {
-      flat-volumes = "no";
-      default-sample-format = "s24le";
-      default-sample-rate = "192000";
-      resample-method = "speex-float-10";
-      avoid-resampling = "true";
-    };
-
-    package = pkgs.pulseaudioFull;
-  };
+  services.xserver.displayManager.gdm.wayland = false;
+  programs.sway.enable = true;
 
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database
