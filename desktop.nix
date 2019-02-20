@@ -11,7 +11,7 @@ in
   nixpkgs.config = {
     firefox = {
       enableGoogleTalkPlugin = true;
-      enableAdobeFlash = true;
+      #enableAdobeFlash = true;
     };
   };
 

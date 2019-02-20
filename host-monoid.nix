@@ -19,7 +19,7 @@
       ./desktop.nix
       ./kubernetes.nix
       ./yubikey.nix
-      ./steam.nix
+      #./steam.nix
     ];
 
   # Fix font sizes in X
