@@ -11,7 +11,6 @@
     # ---- Kubernetes / Docker
     docker
     docker-machine
-    jsonnet
     minikube
     kubectl
     kubernetes-helm

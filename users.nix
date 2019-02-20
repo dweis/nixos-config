@@ -5,7 +5,7 @@
   users.extraUsers.derrick = {
     isNormalUser = true;
     description = "Derrick Weis";
-    extraGroups = [ "wheel" "networkmanager" "audio" "video" "docker" "sway" ];
+    extraGroups = [ "wheel" "networkmanager" "audio" "video" "docker" ];
     shell = "/run/current-system/sw/bin/zsh";
   };
 }

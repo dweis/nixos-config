@@ -57,12 +57,9 @@ in
       mate.enable = true;
     };
     displayManager = {
-      #lightdm = {
-      #  enable = true;
-      #  background = wallpaper;
-      #};
-      gdm = {
+      lightdm = {
         enable = true;
+        background = wallpaper;
       };
     };
     windowManager = {
