@@ -2,7 +2,10 @@
 
 {
   # Enable virtualbox.
-  virtualisation.virtualbox.host.enable = true;
+  #virtualisation.virtualbox.host.enable = true;
+
+  boot.kernelModules = [ "kvm-amd" "kvm-intel" ];
+  virtualisation.libvirtd.enable = true;
 
   # Enable docker.
   virtualisation.docker.enable = true;
