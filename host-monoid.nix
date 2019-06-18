@@ -39,6 +39,11 @@
 
   boot.plymouth.enable = true;
 
+  i18n.consoleFont = "ter-i32b";
+  i18n.consolePackages = with pkgs; [ terminus_font ];
+
+  boot.earlyVconsoleSetup = true;
+
   #services.colord.enable = true;
   environment.systemPackages = with pkgs; [
     argyllcms

@@ -20,7 +20,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   i18n = {
-    consoleFont = "Lat2-Terminus16";
     consoleKeyMap = "us";
     defaultLocale = "en_US.UTF-8";
   };
@@ -28,6 +27,7 @@
   time.timeZone = "America/Toronto";
 
   environment.systemPackages = with pkgs; [
+    inotify-tools
     imagemagick7
     stow # dotfile management
     vim

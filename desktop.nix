@@ -27,7 +27,6 @@ in
     gnome3.dconf-editor
     hyper
     i3blocks-gaps
-    lightlocker
     networkmanagerapplet
     numix-icon-theme
     numix-icon-theme-square
@@ -76,7 +75,7 @@ in
     enableFontDir = true;
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
-      vistafonts
+      corefonts
       inconsolata
       terminus_font
       proggyfonts
