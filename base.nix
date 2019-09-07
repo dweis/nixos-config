@@ -58,7 +58,7 @@
 
   hardware.ledger-nano-s.enable = true;
 
-  system.autoUpgrade.enable = true;
+  system.autoUpgrade.enable = false;
 
   nix.gc.automatic = true;
   nix.gc.dates = "weekly";
