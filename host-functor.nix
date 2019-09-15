@@ -26,7 +26,7 @@
 
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.opengl.driSupport32Bit = true;
-  services.xserver.xrandrHeads = [ "DP-4" "DP-2" ];
+  services.xserver.xrandrHeads = [ "DP-0" "DP-2" ];
 
   services.xserver.displayManager.gdm.wayland = false;
   programs.sway.enable = true;
