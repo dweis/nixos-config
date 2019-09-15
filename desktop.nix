@@ -49,9 +49,8 @@ in
     layout = "us";
     xkbOptions = "caps:super";
     desktopManager = {
-      default = "mate";
+      default = "none";
       xterm.enable = false;
-      mate.enable = true;
     };
     displayManager = {
       lightdm = {
