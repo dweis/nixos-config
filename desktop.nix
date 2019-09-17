@@ -73,17 +73,7 @@ in
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
       corefonts
-      inconsolata
-      terminus_font
-      proggyfonts
-      dejavu_fonts
-      font-awesome-ttf
       ubuntu_font_family
-      powerline-fonts
-      source-code-pro
-      source-sans-pro
-      source-serif-pro
-      emojione
     ];
   };
 
