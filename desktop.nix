@@ -8,22 +8,10 @@ in
   sound.mediaKeys.enable = true;
   hardware.pulseaudio.enable = true;   
 
-  nixpkgs.config = {
-    firefox = {
-      enableGoogleTalkPlugin = true;
-      #enableAdobeFlash = true;
-    };
-  };
-
   environment.systemPackages = with pkgs; [
     alacritty
     google-chrome
-    compton
-    deadbeef
-    firefoxWrapper
     glxinfo
-    gnome3.dconf
-    gnome3.dconf-editor
     i3blocks-gaps
     networkmanagerapplet
     numix-icon-theme
@@ -34,14 +22,9 @@ in
     pavucontrol
     rofi
     scrot
-    spotify
-    stack
-    vlc
-    volumeicon
     vscode
     xbindkeys
     xorg.xmodmap
-    xscreensaver
   ];
 
   services.xserver = {

@@ -38,7 +38,6 @@
     nodePackages.js-beautify # spacemacs/js
     nodePackages.eslint      # spacemacs/js
     ispell                   # spacemacs
-    slack
     curl
     wget
     git
