@@ -32,7 +32,6 @@ in
     layout = "us";
     xkbOptions = "caps:super";
     desktopManager = {
-      default = "none";
       xterm.enable = false;
     };
     displayManager = {
@@ -40,11 +39,11 @@ in
         enable = true;
         background = wallpaper;
       };
+      defaultSession = "none+i3";
     };
     windowManager = {
       i3.package = pkgs.i3-gaps;
       i3.enable = true;
-      default = "i3";
     };
   };
 

@@ -5,7 +5,6 @@
     awscli
     elixir
     erlang
-    google-cloud-sdk
     jsonnet
     nodejs-10_x
     python3

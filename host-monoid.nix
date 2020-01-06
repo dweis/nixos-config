@@ -39,10 +39,10 @@
 
   boot.plymouth.enable = true;
 
-  i18n.consoleFont = "ter-i32b";
-  i18n.consolePackages = with pkgs; [ terminus_font ];
+  console.packages = with pkgs; [ terminus_font ];
+  console.font = "ter-i32b";
 
-  boot.earlyVconsoleSetup = true;
+  console.earlySetup = true;
 
   #services.colord.enable = true;
   environment.systemPackages = with pkgs; [

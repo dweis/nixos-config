@@ -19,14 +19,15 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  i18n = {
-    consoleKeyMap = "us";
-    defaultLocale = "en_US.UTF-8";
-  };
+  i18n.defaultLocale = "en_US.UTF-8";
+
+  console.keyMap = "us";
 
   time.timeZone = "America/Toronto";
 
   environment.systemPackages = with pkgs; [
+    ntfs3g
+    ntfsprogs
     inotify-tools
     imagemagick7
     stow # dotfile management
