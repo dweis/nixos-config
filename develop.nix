@@ -13,6 +13,10 @@
     python3Packages.virtualenv
     sbt
     scala
-    zulu
   ];
+
+  programs.java = with pkgs; {
+    enable = true;
+    package = zulu;
+  };
 }
