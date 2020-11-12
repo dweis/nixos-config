@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, options, ... }:
 
 {
   imports =
@@ -23,7 +23,7 @@
 
   console.keyMap = "us";
 
-  time.timeZone = "America/Toronto";
+  time.timeZone = "America/Vancouver";
 
   environment.systemPackages = with pkgs; [
     ntfs3g
@@ -63,4 +63,6 @@
   nix.gc.automatic = true;
   nix.gc.dates = "weekly";
   nix.gc.options = "--delete-older-than 30d";
+
+  networking.timeServers = options.networking.timeServers.default ++ [ "ca.pool.ntp.org" ];
 }
