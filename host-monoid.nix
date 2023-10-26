@@ -24,13 +24,13 @@
 
   # Fix font sizes in X
   services.xserver.dpi = 144;
-  fonts.fontconfig.dpi = 144;
 
   # Fix sizes of GTK/GNOME ui elements
   environment.variables = {
-    #GDK_SCALE = lib.mkDefault "2";
-    #GDK_DPI_SCALE = lib.mkDefault "0.5";
+    GDK_SCALE = lib.mkDefault "2";
+    GDK_DPI_SCALE = lib.mkDefault "0.5";
     WINIT_HIDPI_FACTOR = "2.0";
+    JAVA_OPTIONS = "-Dsun.java2d.uiScale=2";
   };
 
   # Use the systemd-boot EFI boot loader.

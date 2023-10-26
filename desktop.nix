@@ -45,6 +45,11 @@ in
       i3.package = pkgs.i3-gaps;
       i3.enable = true;
     };
+    libinput = {
+      touchpad = {
+        naturalScrolling = true;
+      };
+    };
   };
 
   services.upower.enable = true;
@@ -53,7 +58,7 @@ in
   fonts = {
     fontDir.enable = true;
     enableGhostscriptFonts = true;
-    fonts = with pkgs; [
+    packages = with pkgs; [
       corefonts
       ubuntu_font_family
     ];
